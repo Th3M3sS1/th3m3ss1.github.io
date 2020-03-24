@@ -182,9 +182,24 @@ tr:nth-child(even) {
       <!-- Portfolio Grid Items -->
       <div class="row">
 
-        <!-- Portfolio Item 1 -->
-        <div class="col-md-4 col-lg-6">
+
+	  <!-- use "<div class="col-md-6 col-lg-4">" for 3 column in 1 raw and use "<div class="col-md-4 col-lg-6">" for 2 column in 1 raw --!>
+
+		<!-- Portfolio Item 1 -->
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <div class="masthead-subheading font-weight-light mb-0">DOTA 2 CLONE</div>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/Dota.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <div class="masthead-subheading font-weight-light mb-0">COC/CR CLONE</div>
@@ -194,9 +209,9 @@ tr:nth-child(even) {
           </div>
         </div>
 
-        <!-- Portfolio Item 2 -->
-        <div class="col-md-4 col-lg-6">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <div class="masthead-subheading font-weight-light mb-0">BRAID CLONE</div>
@@ -257,6 +272,205 @@ tr:nth-child(even) {
 
   <!-- Portfolio Modal 1 -->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-left">
+          <div class="container" >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-center text-uppercase mb-0">Dota 2 Clone</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+
+				<p class="mb-5">
+					<ul>
+						<li>In this project, I recreated mechanics of Abilites system of Heros, Buffs and Debuffs and CoolDown system of Dota 2 Game.</li>
+						<li>Dota 2 is multiplayer online battle arena game, and all Heros of this game have unique abilities. I recreated abilities of few heroes and how their abilites affect other heroes.</li>
+						<li>All the information about the abilities are taken from wiki pages of this game.</li>
+						<li>Below are some examples of heroes I made, and I will continue to expllore and add more in future.</li>
+						<li>PS - IF YOU ARE EMPLOYER AND WANT TO SEE THE SOURCE CODE OF THIS PROJECT, EMAIL ME. THE REPOSITORIES ARE KEPT PRIVATE.</li>
+					</ul>
+				</p>
+
+				<hr class="new4">
+				
+				<div class="tab" align="center">
+						<button class="tablinks" onclick="openTab(event, 'BristleBack')"><b><h4>BristleBack</h4></b></button>
+						<button class="tablinks" onclick="openTab(event, 'Lina')"><b><h4>Lina</h4></b></button>
+						<button class="tablinks" onclick="openTab(event, 'Extra')"><b><h4>Extra</h4></b></button>
+				</div>
+
+				<br>
+
+				<p class="mb-5">
+
+					<div id="BristleBack" class="tabcontent">
+						<h4> BRISTLEBACK :</h4>
+						<ul>
+							<li>BristleBack is melee tank hero and famous for his 2 PASSIVE abilites.</li>
+							<li>His first 2 abilites have low mana cost and low cooldown, and other 2 abilities are passive.</li>
+							<li>Below are the abilites of this hero.</li>
+						</ul>
+
+						<br>
+						<h5> First Ability -</h5>
+						<ul>
+							<li>Ability Type - Target Unit</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - This ability add debuff to the target which reduce the armor and movement speed of target enemies. Multiple cast on same target stack up and refresh the duration of debuff.</li>
+							<li>Extra - This ability can stack upto maximum 4 times. The first debuff has more impact and after that stacked debuff affects the target less.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/GooAbility.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/BBSkill1.gif" alt="">
+
+
+						<br>
+						<h5> Second Ability -</h5>
+						<ul>
+							<li>Ability Type - No Target</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - This ability sprays the quills and deal damage to enemies around BristleBack. This ability also add debuff to affected targets.</li>
+							<li>Extra - Whenever affected targets again hit by Quill Spray, it deals Bonus damage till this Bonus damage cross the certain damage limit.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/QuillSprayAbility.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/BBSkill2.gif" alt="">
+
+						<br>
+						<h5> Third Ability -</h5>
+						<ul>
+							<li>Ability Type - Passive</li>
+							<li>Affects - Self</li>
+							<li>Discription - This ability helps BristleBack to take less damage whenever he takes damage from rear or side.</li>
+							<li>Extra - If Bristleback take more than certain amount of damage from the back, he release Quill Spray.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/BristleBackPassive.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/BBSkill3.gif" alt="">
+
+						<br>
+						<h5> Forth Ability -</h5>
+						<ul>
+							<li>Ability Type - Passive</li>
+							<li>Affects - Self</li>
+							<li>Discription - This ability add Buff on BristleBack whenever he cast any ability and this buff increase the movement speed and damage of this hero.</li>
+							<li>Extra - This buff can stack upto maximum 5 times. Each stack has its own duration and does not reset the buff duration of previous stack.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/BristleFuryBuff.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/BBSkill4.gif" alt="">
+					</div>
+
+					<div id="Lina" class="tabcontent">
+						<h4> LINA :</h4>
+						<ul>
+							<li>Lina is ranged ganker hero and famous for destroying enemies with her massive magical damage.</li>
+							<li>Her first 2 fiery spells are her main source of damage, her passive ability add buff to her and her ultimate nukes the emeny with massive damage.</li>
+							<li>Below are the abilites of this hero.</li>
+						</ul>
+
+						<br>
+						<h5> First Ability -</h5>
+						<ul>
+							<li>Ability Type - Target Point</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - This ability sends the wave of fire and deal magical damage on every enemies in its path.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/DragonSlaveAbility.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/LinaSkill1.gif" alt="">
+
+
+						<br>
+						<h5> Second Ability -</h5>
+						<ul>
+							<li>Ability Type - Target Area</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - This ability Summons a column of flames that damages and stuns enemies.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/ThunderStrikeAbility.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/LinaSkill2.gif" alt="">
+
+						<br>
+						<h5> Third Ability -</h5>
+						<ul>
+							<li>Ability Type - Passive</li>
+							<li>Affects - Self</li>
+							<li>Discription - This ability add Buff on Lina whenever she cast any ability and this buff increase the movement speed and attack speed of this hero.</li>
+							<li>Extra - This buff stacks upto maximum 3 times, and each time Lina casts any Spell, the whole duration of Buff resets.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/FierceSoulPassive.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/LinaSkill3.gif" alt="">
+
+						<br>
+						<h5> Forth Ability -</h5>
+						<ul>
+							<li>Ability Type - Target Unit</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - This ability fires a bolt of laser at enemy, dealing massive damage.</li>							
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/LuganBladeAbility.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/LinaSkill4.gif" alt="">
+					</div>
+
+					<div id="Extra" class="tabcontent">
+						<h4> EXTRA :</h4>
+						<ul>
+							<li>And here I added 2 abilites of two different heroes.</li>
+							<li>I will continue to add more heros(with all their abilites) or only single abilities like below.</li>							
+						</ul>
+
+						<br>
+						<h5> Axe's Passive Ability -</h5>
+						<ul>
+							<li>Ability Type - Passive</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - Whenever Axe is attacked, he will perform Counter attack which deals pure damage to all nearby enemies.</li>
+							<li>Extra - This counter attack has only certain chances to perform.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/CounterHelix.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/AxePassive.gif" alt="">
+
+						<br>
+						<h5> Sven's Passive Ability -</h5>
+						<ul>
+							<li>Ability Type - Passive</li>
+							<li>Affects - Enemies</li>
+							<li>Discription - Sven deal damage with his great sword and cleaving all nearby enemies with his attack.</li>
+							<li>Extra - This ability has one downside, nearby enemies won't take full damage, still they receive high percentage of full damage.</li>
+							<li>Source Code - My Github Repositories/Dota2Clone/Assets/Scripts/CleaveDamage.cs</li>
+						</ul>
+						<img class="img-fluid rounded mb-5" src="img/portfolio/SvenPassive.gif" alt="">
+
+					</div>
+				</p>
+
+
+				<hr class="new4">
+				<button class="btn btn-primary" href="#" data-dismiss="modal">
+						<i class="fas fa-times fa-fw"></i>
+						Close Window
+						</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -382,17 +596,17 @@ tr:nth-child(even) {
 						<h5> Inferno Tower -</h5>
 						<ul>
 							<li>Preferred Target - Ground and Air, both</li>
-							<li>Attack Type - Single</li>
+							<li>Attack Type - Single (More damage over time)</li>
 							<li>Source Code - My Github Repositories/ClashOfClansClone/Assets/Scripts/InfernoTower.cs</li>
 						</ul>
-						<img class="img-fluid rounded mb-5" src="img/portfolio/InfernoTowerSinle.gif" alt="">
+						<img class="img-fluid rounded mb-5" src="img/portfolio/InfernoTowerSingle.gif" alt="">
 
 						<br>
 
 						<h5> Inferno Tower -</h5>
 						<ul>
 							<li>Preferred Target - Ground and Air, both</li>
-							<li>Attack Type - Area</li>
+							<li>Attack Type - Area (Constance damage over time)</li>
 							<li>Source Code - My Github Repositories/ClashOfClansClone/Assets/Scripts/InfernoTower.cs</li>
 						</ul>
 						<img class="img-fluid rounded mb-5" src="img/portfolio/InfernoTowerArea.gif" alt="">
@@ -464,8 +678,8 @@ tr:nth-child(even) {
     </div>
   </div>
 
-  <!-- Portfolio Modal 2 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
